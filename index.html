@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08090d">
+<title>y kresta dobrodushie // killface</title>
+<style>
+:root{--bg:#000000;--panel:#080808;--red:#ff234f;--cyan:#53e8ff;--text:#f5f5f7;--muted:#92929b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 75% 15%,#101014 0,transparent 38%),var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background-image:linear-gradient(#7772 1px,transparent 1px),linear-gradient(90deg,#7772 1px,transparent 1px);background-size:45px 45px;mask-image:linear-gradient(to bottom,black,transparent 85%);z-index:-1}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:#000000ed;backdrop-filter:blur(12px);border-bottom:1px solid #ffffff12}
+.logo{font-weight:900;letter-spacing:1px}.logo span{color:var(--red)}nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:13px}nav a:hover{color:var(--cyan)}
+section{padding:100px 8%;position:relative}.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:25px;padding-top:120px}
+.eyebrow{color:var(--cyan);letter-spacing:4px;font-size:11px;font-weight:bold}.hero h1{font-size:clamp(38px,6vw,76px);line-height:.98;letter-spacing:-3px;margin:18px 0}.hero h1 span{color:var(--red)}.sub{color:var(--muted);line-height:1.7;max-width:510px}.tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}.tag{border:1px solid #ffffff2b;padding:9px 12px;border-radius:3px;font-size:12px;color:#d8dbe5}
+.scene{height:440px;display:grid;place-items:center;perspective:1100px;overflow:visible}
+.laptop{width:330px;height:230px;position:relative;transform-style:preserve-3d;animation:orbit 12s linear infinite}
+@keyframes orbit{0%{transform:rotateY(-22deg) rotateX(7deg)}50%{transform:rotateY(22deg) rotateX(-2deg)}100%{transform:rotateY(-22deg) rotateX(7deg)}}
+.screen{position:absolute;left:25px;top:0;width:280px;height:190px;background:linear-gradient(135deg,#171717,#000000);border:7px solid #454957;border-radius:12px 12px 5px 5px;transform:rotateX(-4deg);box-shadow:0 0 35px #ff31582b,inset 0 0 20px #000}
+.screen:before{content:"";position:absolute;inset:9px;background:radial-gradient(circle at 60% 30%,#ff315855,transparent 30%),repeating-linear-gradient(0deg,transparent 0 13px,#ffffff0c 14px);border:1px solid #ffffff18}
+.screen-content{position:absolute;inset:22px 15px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;z-index:1}.screen-content strong{font-size:23px;letter-spacing:2px;text-shadow:0 0 12px var(--red)}.screen-content small{color:var(--cyan);font-size:9px;letter-spacing:3px;margin-top:10px}
+.base{position:absolute;top:185px;left:0;width:330px;height:35px;background:linear-gradient(#aeb4c2,#454957 55%,#232631);clip-path:polygon(8% 0,92% 0,100% 82%,95% 100%,5% 100%,0 82%);transform:rotateX(48deg);transform-origin:top;box-shadow:0 18px 30px #000}
+.base:after{content:"";position:absolute;top:4px;left:37%;width:26%;height:10px;background:#626979;border-radius:2px}
+.orbit-ring{position:absolute;width:410px;height:145px;border:1px solid #65f7e255;border-radius:50%;transform:rotate(-18deg);animation:ring 9s linear infinite}.orbit-ring.two{width:440px;height:190px;border-color:#ff31584c;transform:rotate(48deg);animation-direction:reverse}
+@keyframes ring{to{rotate:360deg}}
+.section-title{font-size:clamp(28px,4vw,45px);margin:12px 0 25px;letter-spacing:-1px}.section-title span{color:var(--red)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:linear-gradient(135deg,#151722e8,#0d0e14e8);border:1px solid #ffffff17;border-radius:8px;padding:25px}.card h3{margin-top:0}.card p{color:var(--muted);line-height:1.75}.stat{font-size:12px;color:var(--cyan);letter-spacing:2px}
+.music{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.music-name{font-size:25px;font-weight:bold}.music-name small{display:block;font-size:12px;color:var(--muted);font-weight:normal;margin-top:8px}.btn{display:inline-block;text-decoration:none;background:var(--red);color:white;padding:13px 18px;font-weight:bold;font-size:12px;letter-spacing:1px;border-radius:3px;transition:.2s}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px #ff315844}.note{font-size:12px;color:var(--muted);line-height:1.6;margin-top:15px}
+footer{padding:28px 8%;border-top:1px solid #ffffff15;color:#777d8c;font-size:11px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:760px){nav{padding:15px 5%}nav a{margin-left:10px;font-size:11px}.hero{grid-template-columns:1fr;padding-top:130px}.scene{height:320px;order:-1;transform:scale(.8);margin:-25px 0}.about-grid{grid-template-columns:1fr}section{padding:80px 6%}.hero h1{letter-spacing:-2px}.music{align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav><div class="logo">YK<span>//</span>KF</div><div><a href="#about">ОБО МНЕ</a><a href="#interests">ИНТЕРЕСЫ</a><a href="#music">МУЗЫКА</a></div></nav>
+<main>
+<section class="hero">
+<div>
+<div class="eyebrow">PERSONAL PAGE / DIGITAL CULTURE</div>
+<h1>y kresta<br>dobrodushie<br><span>// killface</span></h1>
+<p class="sub">Интересуюсь цифровым миром, OSINT и кибербезопасностью. Исследую открытые источники, технологии и цифровую культуру.</p>
+<div class="tags"><span class="tag">OSINT</span><span class="tag">CYBERSECURITY</span><span class="tag">DIGITAL CULTURE</span></div>
+</div>
+<div class="scene" aria-label="Анимированный трёхмерный открытый ноутбук">
+<div class="orbit-ring"></div><div class="orbit-ring two"></div>
+<div class="laptop"><div class="screen"><div class="screen-content"><strong>COUNTER<br>CULTURE</strong><small>THINK OUTSIDE THE FRAME</small></div></div><div class="base"></div></div>
+</div>
+</section>
+<section id="about">
+<div class="eyebrow">01 / PROFILE</div><h2 class="section-title">Немного <span>обо мне</span></h2>
+<div class="about-grid">
+<div class="card"><div class="stat">ПРОФИЛЬ</div><h3>y kresta dobrodushie // killface</h3><p>Личная страница о моих интересах, технологиях и цифровой культуре. Мне нравится узнавать, как устроен интернет, и изучать инструменты для работы с открытой информацией.</p></div>
+<div class="card"><div class="stat">ДЕТАЛИ</div><h3>Дата рождения: 24 апреля</h3><p>Главные направления: OSINT, кибербезопасность и цифровая культура. Изучаю технологии с акцентом на ответственное и законное применение.</p></div>
+</div>
+<p class="note">Перед публикацией проверь личные данные: эта страница будет публичной. Возраст намеренно не указан — при желании его можно добавить прямо в index.html.</p>
+</section>
+<section id="interests">
+<div class="eyebrow">02 / FOCUS</div><h2 class="section-title">Мои <span>увлечения</span></h2>
+<div class="about-grid">
+<div class="card"><div class="stat">01 — OSINT</div><h3>Open Source Intelligence</h3><p>Поиск и анализ информации из открытых источников, проверка фактов и цифровые расследования в рамках закона.</p></div>
+<div class="card"><div class="stat">02 — CYBERSECURITY</div><h3>Кибербезопасность</h3><p>Изучение защиты аккаунтов, приватности, сетевой безопасности и безопасных практик в цифровой среде.</p></div>
+<div class="card"><div class="stat">03 — WEIGHTLIFTING</div><h3>Тяжёлая атлетика</h3><p>Сила, техника, дисциплина и постоянное развитие.</p></div>
+</div>
+</section>
+<section id="music">
+<div class="eyebrow">03 / SOUNDTRACK</div><h2 class="section-title">На повторе: <span>«Револьвер»</span></h2>
+<div class="card music"><div><div class="music-name">Револьвер<small>Открой поиск трека на YouTube</small></div></div><a class="btn" href="https://www.youtube.com/results?search_query=%D0%BF%D0%B5%D1%81%D0%BD%D1%8F+%D0%A0%D0%B5%D0%B2%D0%BE%D0%BB%D1%8C%D0%B2%D0%B5%D1%80" target="_blank" rel="noopener noreferrer">▶ НАЙТИ ТРЕК</a></div>
+<p class="note">На странице нет встроенного аудиофайла: название «Револьвер» встречается у разных треков. Поиск открывает варианты на YouTube, чтобы выбрать нужного исполнителя.</p>
+</section>
+</main>
+<footer><span>YK // KILLFACE</span><span>PERSONAL PAGE · DIGITAL CULTURE</span></footer>
+</body>
+</html>
